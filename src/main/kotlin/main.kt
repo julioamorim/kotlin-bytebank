@@ -10,18 +10,25 @@ fun main() {
     println("número da conta $numeroConta")
     println("Saldo da conta $saldoConta \n")
 
-    if (saldoConta > 0.0)
-        println("Conta é positiva")
-    else if (saldoConta == 0.0)
-        println("Conta esta zerada")
-    else
-        println("Conta negativa")
+    testConditions(saldoConta)
+    count(234, 999)
+    countDownTo(100, 0)
+}
 
+fun testConditions(saldoConta: Double) {
     when {
         saldoConta > 0.0 -> println("Conta é positiva")
         saldoConta == 0.0 -> println("Conta esta zerada")
         else -> println("Conta negativa")
     }
+}
 
+fun count(numberToCount: Int, finalNumberCount: Int) {
+    for (i in numberToCount..finalNumberCount)
+        println(i)
+}
 
+fun countDownTo(maxNubmer: Int, minNumber: Int) {
+    for (i in maxNubmer downTo minNumber step 2)
+        println("Number $i")
 }
