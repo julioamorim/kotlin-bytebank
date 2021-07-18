@@ -1,12 +1,17 @@
 package io.github.julioamorim.model
 
-class BankAccount {
+class BankAccount(
+    var holder: String,
+    var accountNumber: Int
+) {
 
-    var holder: String = ""
-    var accountNumber: Int = 0
     var balance: Double = 0.0
         private set
 
+    /*constructor(holder: String, accountNumber: Int) {
+        this.holder = holder
+        this.accountNumber = accountNumber
+    }*/
 
     fun displayBalance() {
         println(holder + " - " + balance)

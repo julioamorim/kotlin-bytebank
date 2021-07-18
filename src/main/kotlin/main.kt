@@ -17,18 +17,15 @@ fun main() {
     //countDownTo(100, 0)
 
 
-    val julioAccount = BankAccount()
-    julioAccount.accountNumber = 1004
+    val julioAccount = BankAccount("Júlio", 1000)
     julioAccount.cashDeposit(250.00)
-    julioAccount.holder = "Júlio"
 
-    val anotherAccount = BankAccount()
-    anotherAccount.accountNumber = 1005
-    anotherAccount.holder = "Another customer"
+    val anotherAccount = BankAccount("Another customer", 1001)
     anotherAccount.cashDeposit(200.00)
 
     julioAccount.cashDeposit(500.00)
     julioAccount.displayBalance()
+
     anotherAccount.cashDeposit(500.00)
     anotherAccount.displayBalance()
 
