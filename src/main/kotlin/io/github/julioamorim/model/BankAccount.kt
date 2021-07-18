@@ -2,9 +2,9 @@ package io.github.julioamorim.model
 
 class BankAccount {
 
-    var holder: String = ""
-    var accountNumber: Int = 0
-    var balance: Double = 0.0
+    private var holder: String = ""
+    private var accountNumber: Int = 0
+    private var balance: Double = 0.0
 
 
     fun displayBalance() {
@@ -15,21 +15,44 @@ class BankAccount {
         this.balance += value
     }
 
-    fun withDraw(value: Double) {
+    fun cashWithDraw(value: Double) {
         if (this.balance >= value) {
             this.balance -= value
         }
     }
 
-    fun cashTranfer(valueTotranfer: Double, targetAccount: BankAccount) {
+    fun cashTranfer(valueToTranfer: Double, targetAccount: BankAccount): Boolean {
 
-        if (this.balance < valueTotranfer)
-            println("Account from ${this.holder} nas not money suficient")
-        else {
-            println("tranfering cash")
-            targetAccount.balance += valueTotranfer
-            this.balance -= valueTotranfer
+        if (this.balance >= valueToTranfer) {
+            println("Cash transfered")
+            targetAccount.cashDeposit(valueToTranfer)
+            this.balance -= valueToTranfer
+            return true
         }
+        return false
     }
 
+    fun getHolder(): String {
+        return holder
+    }
+
+    fun setHolder(holder: String) {
+        this.holder = holder
+    }
+
+    fun getAccountNumber(): Int {
+        return accountNumber
+    }
+
+    fun setAccountNumber(accountNumber: Int) {
+        this.accountNumber = accountNumber
+    }
+
+    fun getBalance(): Double {
+        return balance
+    }
+
+    fun setBalance(balance: Double) {
+        this.balance = balance
+    }
 }

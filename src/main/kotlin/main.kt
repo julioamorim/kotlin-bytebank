@@ -18,14 +18,14 @@ fun main() {
 
 
     val julioAccount = BankAccount()
-    julioAccount.accountNumber = 1004
-    julioAccount.balance = 250.00
-    julioAccount.holder = "Julio"
+    julioAccount.setAccountNumber(1004)
+    julioAccount.setBalance(250.00)
+    julioAccount.setHolder("Júlio")
 
     val anotherAccount = BankAccount()
-    anotherAccount.accountNumber = 1005
-    anotherAccount.holder = "Another customer"
-    anotherAccount.balance = 200.00
+    anotherAccount.setAccountNumber(1005)
+    anotherAccount.setHolder("Another customer")
+    anotherAccount.setBalance(200.00)
 
     julioAccount.cashDeposit(500.00)
     julioAccount.displayBalance()
