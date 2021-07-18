@@ -26,6 +26,33 @@ fun main() {
     anotherAccount.accountNumber = 1005
     anotherAccount.holder = "Another customer"
     anotherAccount.balance = 200.00
+
+    cashDeposit(julioAccount, 500.00)
+    julioAccount.displayBalance()
+    cashDeposit(anotherAccount, 175.00)
+    anotherAccount.displayBalance()
+
+    cashTranfer(anotherAccount, 375.10, julioAccount)
+
+    julioAccount.displayBalance()
+    anotherAccount.displayBalance()
+}
+
+fun cashDeposit(account: BankAccount, value: Double) {
+    account.balance += value;
+}
+
+fun cashTranfer(souceAccount: BankAccount, valueTotranfer: Double, targetAccount: BankAccount) {
+
+    if (souceAccount.balance < valueTotranfer)
+        println("Account from ${souceAccount.holder} nas not money suficient")
+    else {
+        println("tranfering cash")
+        targetAccount.balance += valueTotranfer
+        souceAccount.balance -= valueTotranfer
+    }
+
+
 }
 
 fun testConditions(saldoConta: Double) {

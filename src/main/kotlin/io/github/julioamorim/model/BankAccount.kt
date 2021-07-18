@@ -6,4 +6,9 @@ class BankAccount {
     var accountNumber: Int = 0
     var balance: Double = 0.0
 
+
+    fun displayBalance() {
+        println(holder + " - " + balance)
+    }
+
 }
