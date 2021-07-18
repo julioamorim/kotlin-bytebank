@@ -27,9 +27,9 @@ fun main() {
     anotherAccount.holder = "Another customer"
     anotherAccount.balance = 200.00
 
-    cashDeposit(julioAccount, 500.00)
+    julioAccount.cashDeposit(500.00)
     julioAccount.displayBalance()
-    cashDeposit(anotherAccount, 175.00)
+    anotherAccount.cashDeposit(500.00)
     anotherAccount.displayBalance()
 
     cashTranfer(anotherAccount, 375.10, julioAccount)
@@ -38,9 +38,6 @@ fun main() {
     anotherAccount.displayBalance()
 }
 
-fun cashDeposit(account: BankAccount, value: Double) {
-    account.balance += value;
-}
 
 fun cashTranfer(souceAccount: BankAccount, valueTotranfer: Double, targetAccount: BankAccount) {
 

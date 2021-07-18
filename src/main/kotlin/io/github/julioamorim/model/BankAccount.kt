@@ -11,4 +11,8 @@ class BankAccount {
         println(holder + " - " + balance)
     }
 
+    fun cashDeposit(value: Double) {
+        this.balance += value;
+    }
+
 }
