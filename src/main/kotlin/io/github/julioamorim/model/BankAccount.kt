@@ -12,7 +12,24 @@ class BankAccount {
     }
 
     fun cashDeposit(value: Double) {
-        this.balance += value;
+        this.balance += value
+    }
+
+    fun withDraw(value: Double) {
+        if (this.balance >= value) {
+            this.balance -= value
+        }
+    }
+
+    fun cashTranfer(valueTotranfer: Double, targetAccount: BankAccount) {
+
+        if (this.balance < valueTotranfer)
+            println("Account from ${this.holder} nas not money suficient")
+        else {
+            println("tranfering cash")
+            targetAccount.balance += valueTotranfer
+            this.balance -= valueTotranfer
+        }
     }
 
 }

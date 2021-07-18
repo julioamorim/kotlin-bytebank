@@ -32,24 +32,10 @@ fun main() {
     anotherAccount.cashDeposit(500.00)
     anotherAccount.displayBalance()
 
-    cashTranfer(anotherAccount, 375.10, julioAccount)
+    anotherAccount.cashTranfer(700.00, julioAccount)
 
     julioAccount.displayBalance()
     anotherAccount.displayBalance()
-}
-
-
-fun cashTranfer(souceAccount: BankAccount, valueTotranfer: Double, targetAccount: BankAccount) {
-
-    if (souceAccount.balance < valueTotranfer)
-        println("Account from ${souceAccount.holder} nas not money suficient")
-    else {
-        println("tranfering cash")
-        targetAccount.balance += valueTotranfer
-        souceAccount.balance -= valueTotranfer
-    }
-
-
 }
 
 fun testConditions(saldoConta: Double) {
