@@ -29,7 +29,7 @@ fun main() {
     anotherAccount.cashDeposit(500.00)
     anotherAccount.displayBalance()
 
-    anotherAccount.cashTranfer(700.00, julioAccount)
+    anotherAccount.cashTranfer(valueToTranfer = 700.00, julioAccount)
 
     julioAccount.displayBalance()
     anotherAccount.displayBalance()
