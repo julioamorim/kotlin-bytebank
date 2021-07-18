@@ -1,0 +1,9 @@
+package io.github.julioamorim.model
+
+class BankAccount {
+
+    var holder: String = ""
+    var accountNumber: Int = 0
+    var balance: Double = 0.0
+
+}

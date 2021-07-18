@@ -1,18 +1,31 @@
+import io.github.julioamorim.model.BankAccount
+
 fun main() {
     println("Welcome to Bytebank!")
-    val titular: String = "Júlio" // variable with val dont change de type
-    val numeroConta: Int = 1000
-    var saldoConta: Double = 0.0
-    saldoConta = 100 + 2.00
-    saldoConta += 100.00
+    //val titular: String = "Júlio" // variable with val dont change de type
+    // val numeroConta: Int = 1000
+    //var saldoConta: Double = 0.0
+    // saldoConta = 100 + 2.00
+    //saldoConta += 100.00
 
-    println("Titular $titular") // with string template, you dont need concatenate with + operator
-    println("número da conta $numeroConta")
-    println("Saldo da conta $saldoConta \n")
+    //println("Titular $titular") // with string template, you dont need concatenate with + operator
+    //println("número da conta $numeroConta")
+    //println("Saldo da conta $saldoConta \n")
 
-    testConditions(saldoConta)
-    count(234, 999)
-    countDownTo(100, 0)
+    //testConditions(saldoConta)
+    //count(234, 999)
+    //countDownTo(100, 0)
+
+
+    val julioAccount = BankAccount()
+    julioAccount.accountNumber = 1004
+    julioAccount.balance = 250.00
+    julioAccount.holder = "Julio"
+
+    val anotherAccount = BankAccount()
+    anotherAccount.accountNumber = 1005
+    anotherAccount.holder = "Another customer"
+    anotherAccount.balance = 200.00
 }
 
 fun testConditions(saldoConta: Double) {
